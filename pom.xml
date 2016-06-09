@@ -22,6 +22,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.kagurabi.services</groupId>
     <artifactId>example-authrest</artifactId>
     <packaging>bundle</packaging>
     <version>1.10-SNAPSHOT</version>
