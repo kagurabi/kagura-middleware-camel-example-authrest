@@ -1,0 +1,13 @@
+target
+*.iml
+*.ipr
+*.iws
+.idea
+.classpath
+.project
+.settings
+*.db
+.DS_Store
+war-rest/overlays/
+settings.xml
+profile.xml
