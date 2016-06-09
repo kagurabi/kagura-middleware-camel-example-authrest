@@ -30,6 +30,12 @@
         <jackson-1.version>1.9.11</jackson-1.version>
     </properties>
 
+    <parent>
+        <groupId>com.kagurabi</groupId>
+        <artifactId>Kagura-bom</artifactId>
+        <version>1.10-SNAPSHOT</version>
+    </parent>
+
     <name>kagura-example-authrest</name>
     <description>An example Authentication REST service for Kagura</description>
 
@@ -88,18 +94,6 @@
         </dependency>
 
     </dependencies>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.kagurabi</groupId>
-                <artifactId>Kagura-bom</artifactId>
-                <version>1.10-SNAPSHOT</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <build>
         <plugins>
