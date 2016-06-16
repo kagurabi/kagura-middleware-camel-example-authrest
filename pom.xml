@@ -32,7 +32,7 @@
 
     <parent>
         <groupId>com.kagurabi</groupId>
-        <artifactId>Kagura-bom</artifactId>
+        <artifactId>Kagura-karaf-bom</artifactId>
         <version>1.10-SNAPSHOT</version>
     </parent>
 
