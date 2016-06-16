@@ -1,0 +1,35 @@
+# docker box definition
+box: maven
+
+# Build definition
+build:
+  steps:
+    - script:
+        name: mvn
+        code: |
+          mvn clean package test -X -e
+deploy:
+  steps:
+    - script:
+      name: create settings.xml
+      code: |-
+        mkdir -p ~/.m2
+        ls ~/.m2
+        cat > ~/.m2/settings.xml <<ENDL
+        <?xml version="1.0" encoding="UTF-8"?>
+        <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+            <servers>
+                <server>
+                    <id>ossrh</id>
+                    <username>$OSSRHUSER</username>
+                    <password>$OSSRHPASS</password>
+                </server>
+            </servers>
+        </settings>
+        ENDL
+    - script:
+      name: Do deploy
+      code: |-
+        mvn deploy

@@ -39,6 +39,17 @@
     <name>kagura-example-authrest</name>
     <description>An example Authentication REST service for Kagura</description>
 
+    <repositories>
+        <repository>
+            <id>ossrh-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </repositories>
+
     <dependencies>
          <!--java-->
         <dependency>
